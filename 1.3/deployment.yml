@@ -18,4 +18,6 @@ spec:
         ports:
         - containerPort: 80
       - name: multitool
-        image: multitool:wbitt/network-multitool
+        image: wbitt/network-multitool
+        ports:
+            - containerPort: 8080
