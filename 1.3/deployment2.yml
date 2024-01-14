@@ -12,12 +12,12 @@ spec:
       labels:
         app: nginx
     spec:
+      initContainers:
+      - name: check-service
+        image: busybox
+        command: ['sh', '-c', 'until nslookup nginx-svc; do sleep 1; done']
       containers:
       - name: my-app
         image: nginx:latest
         ports:
         - containerPort: 80
-      initContainers:
-      - name: check-service
-        image: busybox:latest
-        command: ['sh', '-c', 'until nslookup nginx-svc; do sleep 2; done;']
