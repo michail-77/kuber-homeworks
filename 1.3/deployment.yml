@@ -29,10 +29,3 @@ spec:
           name: http-port
         - containerPort: 11443
           name: https-port
-        resources:
-          requests:
-            cpu: "1m"
-            memory: "20Mi"
-          limits:
-            cpu: "10m"
-            memory: "20Mi"
