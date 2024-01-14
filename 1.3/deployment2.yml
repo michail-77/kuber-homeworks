@@ -17,7 +17,7 @@ spec:
         image: busybox
         command: ['sh', '-c', 'until nslookup nginx-svc; do sleep 1; done']
       containers:
-      - name: my-app
+      - name: nginx
         image: nginx:latest
         ports:
         - containerPort: 80
