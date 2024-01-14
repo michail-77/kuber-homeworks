@@ -10,7 +10,7 @@ spec:
     image: nginx:latest
     ports:
     - containerPort: 80
-  initContainers:
-  - name: init-service
-    image: busybox
-    command: ['sh', '-c', 'until nslookup nginx-svc; do echo waiting for nginx-svc; sleep 1; done']
+  # initContainers:
+  # - name: init-service
+  #   image: busybox
+  #   command: ['sh', '-c', 'until nslookup nginx-svc; do echo waiting for nginx-svc; sleep 1; done']
