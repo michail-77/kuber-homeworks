@@ -1,23 +1,16 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Pod
 metadata:
   name: my-nginx
+  labels:
+    app: nginx
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: nginx
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      initContainers:
-      - name: check-service
-        image: busybox
-        command: ['sh', '-c', 'until nslookup nginx-svc; do sleep 1; done']
-      containers:
-      - name: nginx
-        image: nginx:latest
-        ports:
-        - containerPort: 80
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+  initContainers:
+  - name: init-service
+    image: busybox
+    command: ['sh', '-c', 'until nslookup nginx-svc; do echo waiting for nginx-svc; sleep 1; done']
