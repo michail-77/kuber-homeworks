@@ -1,7 +1,7 @@
 apiVersion: v1
-kind: deployment
+kind: pod
 metadata:
-  name: nginx2
+  name: my-nginx
 spec:
   replicas: 1
   selector:
