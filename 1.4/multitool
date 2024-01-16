@@ -1,3 +1,4 @@
 kubectl run multitool --image=wbitt/network-multitool
 kubectl exec -it pod-name /bin/bash
 kubectl exec -it multitool -- curl nginx-svc
+kubectl run mycurlpod --image=curlimages/curl -i --tty --rm -- sh
