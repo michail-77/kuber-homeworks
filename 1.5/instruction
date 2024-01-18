@@ -3,6 +3,11 @@ kubectl apply -f be-service.yaml
 kubectl apply -f fe-deployment.yaml
 kubectl apply -f fe-service.yaml
 
+kubectl get po
+kubectl get svc
+kubectl get ep
+kubectl exec frontend-...-... -- curl be-service
+
 kubectl create ns ingress-nginx
 helm -m ingress-nginx install ingress-nginx ingress-nginx/ingress-nginx
 kubectl apply -f ingress.yaml
