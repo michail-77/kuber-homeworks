@@ -1,0 +1,11 @@
+kubectl apply -f be-deployment.yaml
+kubectl apply -f be-service.yaml
+kubectl apply -f fe-deployment.yaml
+kubectl apply -f fe-service.yaml
+
+kubectl create ns ingress-nginx
+helm -m ingress-nginx install ingress-nginx ingress-nginx/ingress-nginx
+kubectl apply -f ingress.yaml
+kubectl -n ingress-nginx get po
+kubectl -n ingress-nginx get svc
+kubectl -n ingress-nginx exec -it ingress-nginx-...-... -- bash
