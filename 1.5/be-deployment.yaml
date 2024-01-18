@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: be-multitool
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: be-multitool
+  template:
+    metadata:
+      labels:
+        app: be-multitool
+    spec:
+      containers:
+      - name: be-multitool
+        image: wbitt/network-multitool
+        ports:
+        - containerPort: 8080
+          name: http-port
+        - containerPort: 11443
+          name: https-port
+        resources:
+          requests:
+            cpu: "1m"
+            memory: "20Mi"
+          limits:
+            cpu: "10m"
+            memory: "20Mi"
