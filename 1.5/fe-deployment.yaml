@@ -6,7 +6,7 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: fe
+      app: fe-nginx
   template:
     metadata:
       labels:
