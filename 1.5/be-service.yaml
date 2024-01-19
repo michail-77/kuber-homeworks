@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: be-service
 spec:
-  selector:
-    app: be-multitool
   ports:
     - name: multitool
       protocol: TCP
       port: 80
       targetPort: 80
+    selector:
+    app: be-multitool
