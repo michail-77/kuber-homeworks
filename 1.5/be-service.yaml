@@ -7,6 +7,5 @@ spec:
     - name: multitool
       protocol: TCP
       port: 80
-      targetPort: 80
-    selector:
+  selector:
     app: be-multitool
