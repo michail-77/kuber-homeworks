@@ -9,7 +9,7 @@ kubectl get ep
 kubectl exec frontend-...-... -- curl be-service
 
 kubectl create ns ingress-nginx
-helm -m ingress-nginx install ingress-nginx ingress-nginx/ingress-nginx
+helm -n ingress-nginx install ingress-nginx ingress-nginx/ingress-nginx
 kubectl apply -f ingress.yaml
 kubectl -n ingress-nginx get po
 kubectl -n ingress-nginx get svc
