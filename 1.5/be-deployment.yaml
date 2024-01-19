@@ -16,9 +16,9 @@ spec:
       - name: be-multitool
         image: wbitt/network-multitool
         ports:
-        - containerPort: 8080
+        - containerPort: 80
           name: http-port
-        - containerPort: 11443
+        - containerPort: 443
           name: https-port
         resources:
           requests:
