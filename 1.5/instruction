@@ -8,9 +8,14 @@ kubectl get svc
 kubectl get ep
 kubectl exec frontend-...-... -- curl be-service
 
+kubectl get ingressclass --all-namespaces
+kubectl delete ingressclass nginx --all-namespaces
+
 kubectl create ns ingress-nginx
 helm -n ingress-nginx install ingress-nginx ingress-nginx/ingress-nginx
 kubectl apply -f ingress.yaml
 kubectl -n ingress-nginx get po
 kubectl -n ingress-nginx get svc
 kubectl -n ingress-nginx exec -it ingress-nginx-...-... -- bash
+
+
