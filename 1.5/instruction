@@ -33,6 +33,8 @@ data:
       - 192.168.1.240-192.168.1.250
 #теперь не в ожидании
 
+# https://stackoverflow.com/questions/44110876/kubernetes-service-external-ip-pending
+#На случай, если кто-то использует MicroK8s: вам нужен балансировщик сетевой нагрузки.
 #MicroK8s поставляется с metallb, вы можете включить его следующим образом:
 microk8s enable metallb 
 #<pending> тогда он должен превратиться в реальный IP-адрес.
