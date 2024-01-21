@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  namespace: ingress-configmap
+  namespace: ingress-nginx
   name: config
 data:
   config: |
     address-pools:
-    - name: ingress-nginx
+    - name: ingress-configmap
       protocol: layer2
       addresses:
       - 192.168.1.240-192.168.1.250
