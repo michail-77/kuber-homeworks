@@ -1,0 +1,7 @@
+```
+k exec -it myapp-deployment-664846f6b-xxvj8 -c multitool  -- bash
+bash-5.1# ls shared-data/
+
+k get po
+kubectl exec -it <multitool-pod-name> -- cat /shared-data/data.txt
+
