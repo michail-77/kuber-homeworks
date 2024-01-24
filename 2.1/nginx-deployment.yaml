@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: busybox
+  name: my-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: busybox
+      app: my-app
   template:
     metadata:
       labels:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: busybox
-        image: nbusybox:latest
+        image: busybox
         ports:
         - containerPort: 80
 
