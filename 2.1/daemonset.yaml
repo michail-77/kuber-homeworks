@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: multitool
-        image: your-multitool-image:tag # Укажите ваш образ MultiTool
+        image: wbitt/network-multitool
         volumeMounts:
         - name: varlog
           mountPath: /var/log

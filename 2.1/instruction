@@ -5,3 +5,5 @@ bash-5.1# ls shared-data/
 k get po
 kubectl exec -it <multitool-pod-name> -- cat /shared-data/data.txt
 
+kubectl describe po myapp-deployment-5c4f84f44d-ptk66
+
