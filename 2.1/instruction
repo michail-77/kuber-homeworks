@@ -9,3 +9,5 @@ kubectl describe po myapp-deployment-5c4f84f44d-ptk66
 
 kubectl exec log-reader-gkp89 -it -- tail -n 10 /var/log/syslog
 
+kubectl exec -it log-reader-gkp89 -- sh
+tail -n 10 /var/log/syslog
